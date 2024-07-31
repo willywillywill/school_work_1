@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ROOT</title>
+    <script src="/public/js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="/public/css/root.css">
+
+</head>
+<body>
+    <div class="left">
+        <input type="button" id="log_off_btn" value="登出">
+    </div>
+    <div class="right">
+        <div id="download_div">
+            <a href="/public/xls/ok.xlsx">
+                <input type="button" value="下載">
+            </a>
+            <input type="button" value="清除" id="cls_btn">
+            <table id="t1">
+                <thead>
+                    <tr id="download_head"></tr>
+                </thead>
+                <tbody id="download_body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="application/javascript" src="/public/js/root.js"></script>
+</body>
+</html>

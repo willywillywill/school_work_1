@@ -1,0 +1,133 @@
+#updata_btn{
+    width: 100px;
+    height: 40px;
+    color: #000000;
+    background-color: rgba(166, 166, 166, 0.7);
+    border-radius: 5px;
+    font-size: 15px;
+}
+#updata_btn:hover{
+    background-color: rgba(117, 117, 117, 0.7);
+    border-width: 2px;
+}
+#updata_btn:active{
+    transform: translateY(2px);
+}
+
+#out_btn{
+    width: 100px;
+    height: 40px;
+    background-color: #000000;
+    border-radius: 5px;
+    font-size: 15px;
+}
+#out_btn:hover{
+    border-width: 2px;
+}
+#out_btn:active{
+    transform: translateY(2px);
+}
+
+#class_btn{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    height: 25px;
+}
+#class_btn:hover{
+    border-width: 2px;
+    border-color: #002b6c;
+}
+#top_btn{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(89, 89, 89, 0.8);
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    position:fixed;
+    bottom: 10px;
+    right:10px;
+}
+#top_btn:hover{
+    border-width: 2px;
+}
+
+th{
+    padding: 0.5vw;
+}
+thead{
+    color: white;
+    background-color: #383838;
+}
+tbody{
+    background-color: #c2c2c2;
+}
+input{
+    border-width: 0px;
+    height: 20px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+table{
+    padding: 5px;
+    border: 5px solid rgba(0, 0, 0, 0.86);
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+@font-face{
+    font-family: 'ChiayiCity';
+    src: url('static/ChiayiCity.ttf') format('truetype');
+}
+body{
+    font-family: "ChiayiCity", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.all_info{
+    margin-top: 20px;
+}
+#t1{
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+#t2{
+    float: left;
+    width: 58vw;
+}
+
+.t_ok{
+    border-color: #505050;
+    background-color: #ffffff;
+    width: 40vw;
+    position:fixed;
+    top: 30vh;
+    left:30%;
+    visibility: hidden;
+}
+#t_ok_n_btn{
+    background-color: #c94a4a;
+    border-radius: 5px;
+    height: 35px;
+    color: white;
+}
+#t_ok_n_btn:hover{
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+}
+#t_ok_y_btn{
+    background-color: #688f3a;
+    border-radius: 5px;
+    height: 35px;
+    color: white;
+}
+#t_ok_y_btn:hover{
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+}

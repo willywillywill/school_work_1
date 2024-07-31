@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+    <title>Write</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <script src="/public/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="all_info">
+        <table id="t1">
+            <thead>
+                <tr>
+                    <th colspan="10">填寫校系</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>校系科組學程代碼</th>
+                    <th>可報名之系科組學程數</th>
+                    <th>YES/NO</th>
+                </tr>
+            </thead>
+            <tbody  id="table_info">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="10">
+                        <input type="button" id="updata_btn" value="更新">
+                        <input type="button" id="out_btn" value="送出">
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <table id="t2">
+            <thead>
+                <tr>
+                    <th colspan="10">查詢校系編號</th>
+                </tr>
+                <tr>
+                    <th>招生群（類）別：</th>
+                    <th><input type="text" id="class_input" placeholder="ex：07"></th>
+                    <th><input type="button" id="class_btn" value="GO"></th>
+                    <th colspan="2"></th>
+                </tr>
+                <tr>
+                    <th>學校代碼</th>
+                    <th>校名</th>
+                    <th>校系科組學程代碼</th>
+                    <th>系名</th>
+                    <th>招生群（類）別</th>
+                </tr>
+            </thead>
+            <tbody id="school_table_info"></tbody>
+        </table>
+        <input type="button" id="top_btn" value="top">
+
+        <table class="t_ok" id="t_ok">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>校名</th>
+                    <th>系名</th>
+                    <th>編號</th>
+                </tr>
+            </thead>
+            <tbody id="t_ok_info"></tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="10">
+                        <input type="button" id="t_ok_y_btn" value="是">
+                        <input type="button" id="t_ok_n_btn" value="否">
+                    </th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script type="application/javascript" src="public/js/main.js"></script>
+</body>
+</html>

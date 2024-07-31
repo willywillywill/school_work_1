@@ -1,0 +1,53 @@
+@font-face{
+    font-family: 'ChiayiCity';
+    src: url('static/ChiayiCity.ttf') format('truetype');
+}
+
+body{
+    font-family: "ChiayiCity", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(236, 236, 236, 0.84);
+}
+.left{
+    background-color: #383838;
+    height: 100vh;
+    position:fixed;
+    left: 0;
+    top: 0;
+}
+.right{
+    position:fixed;
+    left: 120px;
+    top: 0;
+    float: left;
+}
+input[type=button]{
+    margin-top: 20px;
+    margin-left: 5px;
+    width: 120px;
+    height: 50px;
+    border-width: 0px;
+    border-radius: 5px;
+    background-color: #383838;
+    color: white;
+    font-size: 20px;
+}
+input[type=button]:hover{
+    background-color: rgba(24, 24, 24, 0.77);
+}
+
+#t1{
+    margin-top: 10px;
+    border: 5px solid rgba(0, 0, 0, 0.86);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+th{
+    width: 70px;
+}
+
+#download_div{
+    padding: 20px;
+}
