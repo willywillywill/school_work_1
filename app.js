@@ -93,11 +93,12 @@ app.post("/save_info", (req,res)=>{
     const key = req.body.key.toString()
 
     const idx = key2idx[key];
-
     let out = [w3[idx]["班級"], w3[idx]["座號"], w3[idx]["學號"], w3[idx]["姓名"]]
+
     for (let j=0 ; j<info.length ; j++){
         out.push(info[j]["校系科組學程代碼"])
     }
+
 
     let workbook = XLSX.readFile("static/xls/ok.xlsx")
     let sheet = workbook.Sheets["final"];
@@ -105,7 +106,7 @@ app.post("/save_info", (req,res)=>{
     variable.e.r++;
     variable.e.c = 0;
     let rc = XLSX.utils.encode_range(variable.s, variable.e).split(":")[1];
-    console.log(workbook.Sheets[sheet_name])
+    //console.log(workbook.Sheets[sheet_name])
     XLSX.utils.sheet_add_aoa(workbook.Sheets[sheet_name], [out], { origin: rc })
     XLSX.writeFile(workbook, "static/xls/ok.xlsx")
 
@@ -200,7 +201,6 @@ app.get("/title_search_val", (req, res)=>{
         let out2 = get_w1_title('21');
         out = out.concat(out2);
     }
-
     res.send(out)
 })
 

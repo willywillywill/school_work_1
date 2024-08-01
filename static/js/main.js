@@ -82,7 +82,6 @@ $("#updata_btn").click(function () {
                 max_val[title] = {"max":data, "now":1, "l":[i]}
             }
         })
-
         get_val(val, function (data, sta) {
             if (data !== "0") save_val.push(data)
             else {
@@ -91,6 +90,12 @@ $("#updata_btn").click(function () {
                 can_not_click();
             }
         })
+        for (let j=0 ; j<6 ; j++){
+            const val_2 = chick_val($(`#input_id_${j}`).val());
+            if ((i!==j) && (val === val_2)){
+                can_not_click();
+            }
+        }
     }
 });
 
