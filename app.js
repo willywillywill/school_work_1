@@ -88,11 +88,12 @@ app.get("/final", (req, res)=>{
 function ec(r, c) {
     return XLSX.utils.encode_cell({ r: r, c: c });
 }
-app.post("/save_info", (req,res)=>{
+app.post("/save_info",  (req,res)=>{
     const info = JSON.parse(req.body.info)
     const key = req.body.key.toString()
 
     const idx = key2idx[key];
+
     let out = [w3[idx]["班級"], w3[idx]["座號"], w3[idx]["學號"], w3[idx]["姓名"]]
 
     for (let j=0 ; j<info.length ; j++){
