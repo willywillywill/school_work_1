@@ -1,7 +1,4 @@
-@font-face{
-    font-family: 'ChiayiCity';
-    src: url('static/ChiayiCity.ttf') format('truetype');
-}
+
 body{
     font-family: "ChiayiCity", sans-serif;
     display: flex;
