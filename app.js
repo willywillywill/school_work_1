@@ -212,16 +212,7 @@ app.get("/title_search_val", (req, res)=>{
     res.send(out)
 })
 
-
-https.createServer(options, app).listen(3000, "0.0.0.0", ()=>{
-    console.log('Server is running at http://localhost:3000/');
-
-})
-
-/*
 const server = app.listen(3000, "0.0.0.0", ()=>{
     console.log('Server is running at http://localhost:3000/');
-    console.log(server.address().address)
 })
- */
 
