@@ -4,6 +4,8 @@ const app = express();
 const XLSX = require("xlsx");
 const path = require("path");
 var bodyParser = require('body-parser');
+const https = require('https');
+const fs = require('fs');
 const file1 = "static/xls/school.xls";
 const workbook = XLSX.readFile(file1);
 const title1 = "四技甄選簡章資料";
@@ -16,6 +18,11 @@ const w3 = XLSX.utils.sheet_to_json(id_workbook.Sheets["身分"])
 const sheet_name = "final"
 let id2key = {}
 let key2idx = {}
+
+const options = {
+  key: fs.readFileSync('path/to/server.key'),
+  cert: fs.readFileSync('path/to/server.crt')
+};
 
 app.use("/public", express.static(path.join(__dirname, "static", )))
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -206,7 +213,15 @@ app.get("/title_search_val", (req, res)=>{
 })
 
 
-app.listen(3000, "0.0.0.0", ()=>{
+https.createServer(options, app).listen(3000, "0.0.0.0", ()=>{
     console.log('Server is running at http://localhost:3000/');
+
 })
+
+/*
+const server = app.listen(3000, "0.0.0.0", ()=>{
+    console.log('Server is running at http://localhost:3000/');
+    console.log(server.address().address)
+})
+ */
 
